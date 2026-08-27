@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai and Code</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+    
+    <script>
+        const parent = document.querySelector(".parent")
+        // console.log(parent)
+        // console.log(parent.children)
+        // console.log(parent.children[1].innerText)
+
+        // console.log("===== Print all children =====")
+        // for(let i = 0; i<parent.children.length; i++){
+        //     console.log(parent.children[i].innerText)
+        // }
+    
+        parent.children[1].style.color = "orange"
+        // console.log("FirstElementChild method ",parent.firstElementChild)
+        // console.log("To select LastElementChild ",parent.lastElementChild)
+
+        //To go to parent from children
+        // const child = document.querySelector('.day')
+        // console.log("Child : ",child)
+        // console.log("parent : ",child.parentElement)
+        // console.log("Next element Sibling : ",child.nextElementSibling)
+
+        console.log("Nodes : ",parent.childNodes)
+        
+
+    </script>
+
+</html>
