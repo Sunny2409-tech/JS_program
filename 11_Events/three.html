@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chai aur code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+
+<script>
+    // const saySunny = () =>{
+    //     console.log("Sunny",Date.now())
+    // }
+    // setInterval(saySunny,2000)
+
+    const saySunny = (str) => {
+        console.log(str + " - ", Date.now())
+    }
+    let intervalRef = setInterval(saySunny, 2000, "Hey")
+
+    //To clear the interval
+    document.querySelector("#stop").addEventListener("click", () => {
+        clearInterval(intervalRef);
+    });
+
+    //To restart the interval
+    document.querySelector("#start").addEventListener("click", () => {
+        intervalRef = setInterval(saySunny, 1000, "Hey");
+    });
+
+
+
+</script>
+
+</html>
